@@ -79,8 +79,9 @@ A13 = x
 # arithmetic with it. Compare to what you did in Problem 2.
 # Taylor = 0*x # Initialize the Taylor approximation - Remove this once you
                 # define x!
+
 for temp in range(100):
-    x[temp] = 1 - np.exp(x[temp],2)/2 + np.exp(x[temp],4)/24 - np.exp(x[temp],6)/720
+    x[temp] = 1 - np.power(x[temp],2)/2 + np.power(x[temp],4)/24 - np.power(x[temp],6)/720
 A14 = x
 # for loop here
 # update Taylor in the for loop using the formula in the sum!
