@@ -60,13 +60,13 @@ Fibonacci[1] = 1
 temp = 0
 for i in range(2, 200, 1):
     if(Fibonacci[i-1] + Fibonacci[i-2] >= 1_000_000):
-        n = i
+        n = i-1
         break
     Fibonacci[i] = Fibonacci[i-1] + Fibonacci[i-2]
 A10 = Fibonacci
 A11 = n
 
-A12 = Fibonacci[:n]
+A12 = Fibonacci[:n+1]
 
 ######### Problem 4 ##########
 ## Part a
