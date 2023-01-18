@@ -72,7 +72,7 @@ A12 = Fibonacci[:n+1]
 ## Part a
 # I will let you create x here.
 x = np.linspace(-1*np.pi, np.pi, 100)
-A13 = x.copy
+A13 = np.copy(x)
 
 ## Part b
 # Assuming that x is defined correctly above, now we can just do regular
