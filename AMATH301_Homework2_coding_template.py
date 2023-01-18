@@ -5,53 +5,73 @@ import matplotlib.pyplot as plt
 
 ######### Problem 1 ##########
 # Use a for loop!
-
+temp = np.arange(32)
+for k in range(32):
+    k = k + 1
+    temp[k-1] = k*(k + 1)*(2*k + 1)/6
+A1 = temp
 
 ######### Problem 2 ##########
 ## Part a
 # I will start this off for you, you will need to finish it.
 y1 = 0 # We will start off with y1 = 0 and then add to it.
 term = 0.1
-for k in range(100000):
-    # y1 = term + ... # You fill in this part
-    break # Remove this, this is here just to make 
-          # the code run before the problem is complete
+for k in range(100_000):
+    y1 = y1 + term
+A2 = y1
 
-# Now do y2
 y2 = 0
 term = 0.1
-# You fill in the rest
+for k in range(100_000_000):
+    y2 = y2 + term
+A3 = y2
 
-# And y3
 y3 = 0
 term = 0.25
+for k in range(100_000_000):
+    y3 = y3 + term
+A4 = y3
 
-# You do y4! It should look basically the same.
-
+y4 = 0
+term = 0.5
+for k in range(100_000_000):
+    y4 = y4 + term
+A5 = y4
 ## Part b - Now take the difference, don't forget absolute value!
+x1 = np.abs(10_000 - y1)
+A6 = x1
 
+x2 = np.abs(y2 - 10_000_000)
+A7 = x2
+
+x3 = np.abs(25_000_000 - y3)
+A8 = x3
+
+x4 = np.abs(y4 - 50_000_000)
+A9 = x4
 
 ######### Problem 3 ##########
-## Part a
-# I will let you fill this in.
+Fibonacci = np.empty(200)
 
-## Part b
-# You will this in
+Fibonacci[0] = 1
+Fibonacci[1] = 1
 
 ## Part c
-# I will start it off for you. Remove the comments and fill in the missing
-# parts.
-for k in range(200):
-    # Check to see if this Fibonacci number would be greater than 1,000,000
-        # If it is not, then update the Fibonacci sequence here
-        # If it is greater than 1,000,000, don't compute it and exit
-    break # You will need a break! This one is here to make the code run.
+temp = 0
+for i in range(2, 200, 1):
+    if(Fibonacci[i-1] + Fibonacci[i-2] >= 1_000_000):
+        n = i - 1
+        break
+    Fibonacci[i] = Fibonacci[i-1] + Fibonacci[i-2]
+A10 = Fibonacci
+A11 = n
 
-## Part d
-# Update the code above to find and record that k corresponding to the largest
-# Fibonacci number less than 1,000,000! Hint: use an if statement and save a
-# new variable!
+A12 = Fibonacci[:n+1]
 
+print(A10)
+print()
+print(A11)
+print(A12)
 ## Part e
 # Slice! If N is the variable corresponding to the k you found above, then
 # slice up through (including) N.
