@@ -60,31 +60,27 @@ Fibonacci[1] = 1
 temp = 0
 for i in range(2, 200, 1):
     if(Fibonacci[i-1] + Fibonacci[i-2] >= 1_000_000):
-        n = i - 1
+        n = i
         break
     Fibonacci[i] = Fibonacci[i-1] + Fibonacci[i-2]
 A10 = Fibonacci
 A11 = n
 
-A12 = Fibonacci[:n+1]
-
-print(A10)
-print()
-print(A11)
-print(A12)
-## Part e
-# Slice! If N is the variable corresponding to the k you found above, then
-# slice up through (including) N.
-
+A12 = Fibonacci[:n]
 
 ######### Problem 4 ##########
 ## Part a
 # I will let you create x here.
+x = np.linspace(-1*np.pi, np.pi, 100)
+A13 = x
 
 ## Part b
 # Assuming that x is defined correctly above, now we can just do regular
 # arithmetic with it. Compare to what you did in Problem 2.
 # Taylor = 0*x # Initialize the Taylor approximation - Remove this once you
                 # define x!
+for temp in range(100):
+    x[temp] = 1 - np.exp(x[temp],2)/2 + np.exp(x[temp],4)/24 - np.exp(x[temp],6)/720
+A14 = x
 # for loop here
 # update Taylor in the for loop using the formula in the sum!
