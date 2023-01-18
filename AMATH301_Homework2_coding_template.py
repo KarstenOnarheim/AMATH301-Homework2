@@ -51,7 +51,7 @@ x4 = np.abs(y4 - 50_000_000)
 A9 = x4
 
 ######### Problem 3 ##########
-Fibonacci = np.empty(200)
+Fibonacci = np.zeros(200)
 
 Fibonacci[0] = 1
 Fibonacci[1] = 1
@@ -79,7 +79,6 @@ A13 = x
 # arithmetic with it. Compare to what you did in Problem 2.
 # Taylor = 0*x # Initialize the Taylor approximation - Remove this once you
                 # define x!
-
 for temp in range(100):
     x[temp] = 1 - np.power(x[temp],2)/2 + np.power(x[temp],4)/24 - np.power(x[temp],6)/720
 A14 = x
