@@ -50,6 +50,10 @@ A8 = x3
 x4 = np.abs(y4 - 50_000_000)
 A9 = x4
 
+print(x1)
+print(x2)
+print(x3)
+print(x4)
 ######### Problem 3 ##########
 Fibonacci = np.zeros(200)
 
